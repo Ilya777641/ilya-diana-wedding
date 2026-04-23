@@ -47,7 +47,6 @@
         .animate-fadeinright { animation: fadeinright 5s ease 0.5s forwards; opacity: 0; }
         .animate-zoomin { animation: zoomin 5s ease 0.5s forwards; opacity: 0; }
 
-        /* Hero секция */
         .hero {
             position: relative;
             height: 610px;
@@ -111,13 +110,11 @@
             .hero-date { font-size: 40px; }
         }
 
-        /* Основной контент */
         .main-content {
             background-color: #f9f7f7;
             padding: 60px 20px;
         }
 
-        /* Блоки */
         .section {
             max-width: 800px;
             margin: 0 auto 60px;
@@ -143,7 +140,6 @@
             margin-top: 30px;
         }
 
-        /* Галерея */
         .gallery {
             display: flex;
             justify-content: center;
@@ -167,7 +163,6 @@
             .gallery-item { width: 200px; height: 323px; }
         }
 
-        /* Программа дня */
         .schedule-grid {
             display: flex;
             justify-content: space-around;
@@ -195,7 +190,6 @@
             margin: 20px auto;
         }
 
-        /* Карточки */
         .cards-container {
             display: flex;
             justify-content: center;
@@ -221,7 +215,6 @@
             margin-bottom: 15px;
         }
 
-        /* Две кнопки рядом */
         .buttons-row {
             display: flex;
             justify-content: center;
@@ -250,7 +243,6 @@
             opacity: 0.95;
         }
 
-        /* Фото зала */
         .hall-photo {
             margin-top: 30px;
             width: 100%;
@@ -259,14 +251,12 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* Фото дресс-кода */
         .dresscode-photo {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* Таймер */
         .timer-cover {
             height: 80vh;
             min-height: 500px;
@@ -315,7 +305,6 @@
             letter-spacing: 2px;
         }
 
-        /* Контакты */
         .contacts-block {
             margin-top: 40px;
             text-align: center;
@@ -343,7 +332,6 @@
 </head>
 <body>
 
-<!-- Hero секция с ВАШИМ фото -->
 <div class="hero">
     <img src="https://ilya777641.github.io/ilya-diana-wedding/9fac3704-239c-4f60-8aa2-d89baa589815.jpg" alt="Илья и Диана" class="hero-bg">
     <div class="hero-overlay"></div>
@@ -356,9 +344,7 @@
     </div>
 </div>
 
-<!-- Основной контент -->
 <div class="main-content">
-    <!-- Приветственный текст с ПЕРСОНАЛИЗАЦИЕЙ -->
     <div class="section">
         <div class="section-title animate-fadein" id="guestGreeting">Дорогие друзья!</div>
         <div class="section-text animate-fadein" style="animation-delay: 0.3s;">
@@ -369,7 +355,6 @@
         </div>
     </div>
 
-    <!-- Галерея с ВАШИМИ фото -->
     <div class="gallery">
         <div class="gallery-item animate-fadeinright">
             <img src="https://ilya777641.github.io/ilya-diana-wedding/kazan.jpg" alt="Фото слева">
@@ -382,13 +367,11 @@
         </div>
     </div>
 
-    <!-- Цитата с сердечком -->
     <div class="section">
         <img src="https://static.tildacdn.com/tild6330-6339-4030-b236-646537636231/heart_18956525.png" alt="heart" style="width: 57px; margin: 20px auto;">
         <div class="quote" style="font-size: 32px;"><em>Счастье - это, когда ты нашёл того, кто искал тебя.</em></div>
     </div>
 
-    <!-- Место проведения -->
     <div class="section">
         <div class="section-title animate-fadein">место проведения</div>
         <div class="section-text animate-fadein" style="animation-delay: 0.2s;">
@@ -398,39 +381,21 @@
         <div class="section-text animate-fadein" style="animation-delay: 0.4s;">
             место проведения торжества<br>ресторан "Версаль", зал "Царский"
         </div>
-        <!-- Фото зала -->
         <img src="https://ilya777641.github.io/ilya-diana-wedding/zal.jpg" alt="Зал Версаль" class="hall-photo animate-fadein" style="animation-delay: 0.6s;">
     </div>
 
-    <!-- Программа дня -->
     <div class="section">
         <div class="section-title animate-fadein">Программа дня</div>
         <div class="schedule-grid">
-            <div class="schedule-col animate-fadein">
-                <div class="schedule-time">15:30</div>
-                <div class="schedule-label">Сбор гостей</div>
-            </div>
-            <div class="schedule-col animate-fadein" style="animation-delay: 0.2s;">
-                <div class="schedule-time">16:00</div>
-                <div class="schedule-label">Торжественная регистрация</div>
-            </div>
-            <div class="schedule-col animate-fadein" style="animation-delay: 0.4s;">
-                <div class="schedule-time">17:00</div>
-                <div class="schedule-label">Праздничный банкет</div>
-            </div>
-            <div class="schedule-col animate-fadein" style="animation-delay: 0.6s;">
-                <div class="schedule-time">22:00</div>
-                <div class="schedule-label">Завершение вечера</div>
-            </div>
-            <div class="schedule-col animate-fadein" style="animation-delay: 0.8s;">
-                <div class="schedule-time">23:00</div>
-                <div class="schedule-label">Завершение дискотеки</div>
-            </div>
+            <div class="schedule-col animate-fadein"><div class="schedule-time">15:30</div><div class="schedule-label">Сбор гостей</div></div>
+            <div class="schedule-col animate-fadein" style="animation-delay: 0.2s;"><div class="schedule-time">16:00</div><div class="schedule-label">Торжественная регистрация</div></div>
+            <div class="schedule-col animate-fadein" style="animation-delay: 0.4s;"><div class="schedule-time">17:00</div><div class="schedule-label">Праздничный банкет</div></div>
+            <div class="schedule-col animate-fadein" style="animation-delay: 0.6s;"><div class="schedule-time">22:00</div><div class="schedule-label">Завершение вечера</div></div>
+            <div class="schedule-col animate-fadein" style="animation-delay: 0.8s;"><div class="schedule-time">23:00</div><div class="schedule-label">Завершение дискотеки</div></div>
         </div>
         <div class="schedule-line"></div>
     </div>
 
-    <!-- Пожелания и Детали -->
     <div class="cards-container">
         <div class="card-block animate-fadeinleft">
             <h3>ПОЖЕЛАНИЯ</h3>
@@ -440,8 +405,6 @@
         <div class="card-block animate-fadeinright">
             <h3>ДЕТАЛИ</h3>
             <p>Мы создали группы, куда можно будет добавлять фото и видео с нашей свадьбы, чтобы сохранить в памяти лучшие моменты.</p>
-            
-            <!-- ДВЕ КНОПКИ: MAX и TELEGRAM -->
             <div class="buttons-row">
                 <a href="https://max.ru/join/MleaFiKVgDlmSVq3Aw-aavJiCIyh62ZdqjyyWpfxEv4" target="_blank" class="btn-max">📱 ВСТУПИТЬ В MAX</a>
                 <a href="https://t.me/+qm_suAjnZ2RmOWZi" target="_blank" class="btn-telegram">💬 ВСТУПИТЬ В TELEGRAM</a>
@@ -449,12 +412,10 @@
         </div>
     </div>
 
-    <!-- Дресс-код -->
     <div class="section">
         <div class="section-title animate-fadein">Дресс-код</div>
         <div class="section-text animate-fadein" style="animation-delay: 0.2s;">
-            Для нас самое главное-ваше присутствие!
-Но мы будем очень признательны, если вы поддержите цветовую гамму спокойных природных оттенков!
+            Для нас самое главное-ваше присутствие!<br>Но мы будем очень признательны, если вы поддержите цветовую гамму спокойных природных оттенков!
         </div>
         <div style="margin: 30px auto; text-align: center;">
             <img src="https://ilya777641.github.io/ilya-diana-wedding/dresscode.jpg" alt="Дресс-код" class="dresscode-photo animate-fadein" style="animation-delay: 0.4s;">
@@ -462,7 +423,6 @@
         <div class="quote" style="font-size: 32px; margin-top: 20px;"><em>Спасибо!</em></div>
     </div>
 
-    <!-- Контакты -->
     <div class="section">
         <div class="section-title animate-fadein">контакты</div>
         <div class="contacts-block animate-fadein" style="animation-delay: 0.2s;">
@@ -475,28 +435,15 @@
     </div>
 </div>
 
-<!-- Таймер с ВАШИМ фото на фоне -->
 <div class="timer-cover" style="background-image: url('https://ilya777641.github.io/ilya-diana-wedding/9fac3704-239c-4f60-8aa2-d89baa589815.jpg');">
     <div class="timer-overlay"></div>
     <div class="timer-content">
         <div class="timer-title animate-fadeinup">До торжества осталось:</div>
         <div class="timer-digits animate-fadeinup" style="animation-delay: 0.3s;">
-            <div class="timer-block">
-                <div class="timer-number" id="days">00</div>
-                <div class="timer-label">Дни</div>
-            </div>
-            <div class="timer-block">
-                <div class="timer-number" id="hours">00</div>
-                <div class="timer-label">Часы</div>
-            </div>
-            <div class="timer-block">
-                <div class="timer-number" id="minutes">00</div>
-                <div class="timer-label">Минуты</div>
-            </div>
-            <div class="timer-block">
-                <div class="timer-number" id="seconds">00</div>
-                <div class="timer-label">Секунды</div>
-            </div>
+            <div class="timer-block"><div class="timer-number" id="days">00</div><div class="timer-label">Дни</div></div>
+            <div class="timer-block"><div class="timer-number" id="hours">00</div><div class="timer-label">Часы</div></div>
+            <div class="timer-block"><div class="timer-number" id="minutes">00</div><div class="timer-label">Минуты</div></div>
+            <div class="timer-block"><div class="timer-number" id="seconds">00</div><div class="timer-label">Секунды</div></div>
         </div>
         <div class="animate-fadeinup" style="animation-delay: 0.5s; margin-top: 40px;">
             <div style="background: rgba(0,0,0,0.5); display: inline-block; padding: 12px 30px; border-radius: 4px;">
@@ -521,22 +468,16 @@
     function getCorrectGreeting(guestName) {
         if (!guestName) return "Дорогие друзья!";
         
-        // Если есть "и" или запятая — значит пара
-        if (guestName.includes(' и ') || guestName.includes(',') || guestName.includes('&')) {
-            let names = guestName.replace(/[&,]/g, ' и').split(' и ');
-            if (names.length === 2) {
-                let name1 = names[0].trim();
-                let name2 = names[1].trim();
-                let ending1 = name1.slice(-1);
-                let ending2 = name2.slice(-1);
-                let form1 = (ending1 === 'а' || ending1 === 'я') ? 'ая' : 'ой';
-                let form2 = (ending2 === 'а' || ending2 === 'я') ? 'ая' : 'ой';
-                return `Дорог${form1} ${name1} и дорог${form2} ${name2}!`;
-            }
-            return `Дорогие ${guestName}!`;
+        // Проверяем, есть ли в имени несколько человек
+        let isMultiple = guestName.includes(' и ') || guestName.includes('&') || guestName.includes(',');
+        
+        // Если в имени несколько людей
+        if (isMultiple) {
+            let cleaned = guestName.replace(/[&,]/g, ' и').replace(/\s+/g, ' ').trim();
+            return `Дорогие ${cleaned}!`;
         }
         
-        // Одиночное имя
+        // Если имя одно — определяем род по окончанию
         let lastName = guestName.slice(-1);
         if (lastName === 'а' || lastName === 'я') {
             return `Дорогая ${guestName}!`;
@@ -545,7 +486,6 @@
         }
     }
 
-    // Применяем персонализацию
     const guestName = getGuestNameFromURL();
     const greetingElement = document.getElementById('guestGreeting');
     if (greetingElement) {
@@ -581,7 +521,6 @@
     setInterval(updateTimer, 1000);
 </script>
 
-<!-- Музыка -->
 <audio id="bg-music" loop>
     <source src="https://www.dropbox.com/scl/fi/8bl8yd5teyrcwc02h8tvh/Love-Me-Like-You-Do-From-_Fifty-Shades-Of-Grey_.mp3?rlkey=dx2vt43o35c0pjypewqiuyhi0&st=8ufbubk8&raw=1" type="audio/mpeg">
 </audio>
