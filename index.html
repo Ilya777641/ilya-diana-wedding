@@ -220,15 +220,34 @@
             line-height: 1.4;
             margin-bottom: 15px;
         }
-        .telegram-btn {
-            display: inline-block;
-            background-color: #7c5351;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 20px;
+
+        /* Две кнопки рядом */
+        .buttons-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
             margin-top: 20px;
+        }
+        .btn-max, .btn-telegram {
+            display: inline-block;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .btn-max {
+            background-color: #2e5754;
+        }
+        .btn-telegram {
+            background-color: #0088cc;
+        }
+        .btn-max:hover, .btn-telegram:hover {
+            transform: scale(1.03);
+            opacity: 0.95;
         }
 
         /* Фото зала */
@@ -318,6 +337,7 @@
             .quote { font-size: 24px; }
             .timer-title { font-size: 32px; }
             .timer-number { font-size: 40px; }
+            .btn-max, .btn-telegram { padding: 10px 20px; font-size: 16px; }
         }
     </style>
 </head>
@@ -419,8 +439,16 @@
         </div>
         <div class="card-block animate-fadeinright">
             <h3>ДЕТАЛИ</h3>
-            <p>Мы создали группу в Max, куда можно будет добавлять фото и видео с нашей свадьбы, чтобы сохранить в памяти лучшие моменты.</p>
-            <a href="#" class="telegram-btn">ВСТУПИТЬ В ЧАТ</a>
+            <p>Мы создали группы, куда можно будет добавлять фото и видео с нашей свадьбы, чтобы сохранить в памяти лучшие моменты.</p>
+            
+            <!-- ДВЕ КНОПКИ: MAX и TELEGRAM -->
+            <div class="buttons-row">
+                <!-- 🔗 СЮДА ВСТАВИТЬ ССЫЛКУ НА ГРУППУ В MAX -->
+                <a href="https://max.ru/join/MleaFiKVgDlmSVq3Aw-aavJiCIyh62ZdqjyyWpfxEv4" target="_blank" class="btn-max">📱 ВСТУПИТЬ В MAX</a>
+                
+                <!-- 🔗 СЮДА ВСТАВИТЬ ССЫЛКУ НА ГРУППУ В TELEGRAM -->
+                <a href="https://t.me/+qm_suAjnZ2RmOWZi" target="_blank" class="btn-telegram">💬 ВСТУПИТЬ В TELEGRAM</a>
+            </div>
         </div>
     </div>
 
@@ -428,7 +456,8 @@
     <div class="section">
         <div class="section-title animate-fadein">Дресс-код</div>
         <div class="section-text animate-fadein" style="animation-delay: 0.2s;">
-            Для нас самое главное - Ваше присутствие! Но мы будем рады, если Вы поддержите цветовую гамму нашей свадьбы.
+            Для нас самое главное-ваше присутствие!
+Но мы будем очень признательны, если вы поддержите цветовую гамму спокойных природных оттенков!
         </div>
         <!-- Фото дресс-кода вместо цветных квадратов -->
         <div style="margin: 30px auto; text-align: center;">
