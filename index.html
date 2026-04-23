@@ -52,13 +52,17 @@
             position: relative;
             height: 610px;
             overflow: hidden;
+            background-color: #2c2c2c;
         }
         .hero-bg {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
             height: 100%;
+            min-width: 100%;
+            min-height: 100%;
             object-fit: cover;
             z-index: 1;
         }
@@ -68,7 +72,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.5);
             z-index: 2;
         }
         .hero-content {
@@ -248,11 +252,13 @@
             min-height: 500px;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             position: relative;
             display: flex;
             align-items: flex-end;
             justify-content: center;
             padding-bottom: 80px;
+            background-color: #2c2c2c;
         }
         .timer-overlay {
             position: absolute;
@@ -342,20 +348,20 @@
         </div>
     </div>
 
-    <!-- Галерея -->
+    <!-- Галерея с ВАШИМИ фото -->
     <div class="gallery">
         <div class="gallery-item animate-fadeinright">
-            <img src="https://static.tildacdn.com/tild3730-3835-4236-a238-336461353361/5246891718954052783.jpg" alt="Фото 1">
+            <img src="https://ilya777641.github.io/ilya-diana-wedding/kazan.jpg" alt="Фото слева">
         </div>
         <div class="gallery-item animate-zoomin">
-            <img src="https://static.tildacdn.com/tild3531-6135-4933-a561-303362663564/5203927735166765921.jpg" alt="Фото 2">
+            <img src="https://ilya777641.github.io/ilya-diana-wedding/priroda.jpg" alt="Фото по центру">
         </div>
         <div class="gallery-item animate-fadeinleft">
-            <img src="https://static.tildacdn.com/tild3732-3863-4463-a538-326634636431/5431433900883832054.jpg" alt="Фото 3">
+            <img src="https://ilya777641.github.io/ilya-diana-wedding/zelen.jpg" alt="Фото справа">
         </div>
     </div>
 
-    <!-- Цитата с сердечком (ВЕРНУЛ!) -->
+    <!-- Цитата с сердечком -->
     <div class="section">
         <img src="https://static.tildacdn.com/tild6330-6339-4030-b236-646537636231/heart_18956525.png" alt="heart" style="width: 57px; margin: 20px auto;">
         <div class="quote" style="font-size: 32px;"><em>Счастье - это, когда ты нашёл того, кто искал тебя.</em></div>
@@ -477,9 +483,9 @@
 </div>
 
 <script>
-    // Таймер до 31 июля 2026 (ИСПРАВЛЕНО!)
+    // Таймер до 31 июля 2026
     function updateTimer() {
-        const target = new Date(2026, 6, 31, 0, 0, 0);  // 6 = июль
+        const target = new Date(2026, 6, 31, 0, 0, 0);
         const now = new Date();
         const diff = target - now;
 
