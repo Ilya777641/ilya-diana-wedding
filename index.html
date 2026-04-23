@@ -477,13 +477,21 @@
             return `Дорогие ${cleaned}!`;
         }
         
-        // Если имя одно — определяем род по окончанию
-        let lastName = guestName.slice(-1);
-        if (lastName === 'а' || lastName === 'я') {
-            return `Дорогая ${guestName}!`;
-        } else {
-            return `Дорогой ${guestName}!`;
-        }
+        // Список женских имён, оканчивающихся не на а/я
+const femaleExceptions = ['Любовь', 'Николь', 'Жаклин', 'Ассоль', 'Жизель', 'Габриэль', 'Мишель'];
+    
+// Проверяем, есть ли имя в списке исключений
+if (femaleExceptions.includes(guestName)) {
+    return `Дорогая ${guestName}!`;
+}
+    
+// Если имя одно — определяем род по окончанию
+let lastName = guestName.slice(-1);
+if (lastName === 'а' || lastName === 'я') {
+    return `Дорогая ${guestName}!`;
+} else {
+    return `Дорогой ${guestName}!`;
+}
     }
 
     const guestName = getGuestNameFromURL();
