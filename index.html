@@ -231,19 +231,20 @@
             margin-top: 20px;
         }
 
-        /* Дресс-код */
-        .color-circles {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
-            flex-wrap: wrap;
+        /* Фото зала */
+        .hall-photo {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .color-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 5px;
-            border: 1px solid #000;
+
+        /* Фото дресс-кода */
+        .dresscode-photo {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         /* Таймер */
@@ -324,7 +325,7 @@
 
 <!-- Hero секция с ВАШИМ фото -->
 <div class="hero">
-    <img src="https://ilya777641.github.io/ilya-diana-wedding/vmeste.jpg" alt="Илья и Диана" class="hero-bg">
+    <img src="https://ilya777641.github.io/ilya-diana-wedding/9fac3704-239c-4f60-8aa2-d89baa589815.jpg" alt="Илья и Диана" class="hero-bg">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div class="hero-names animate-fadeinup">
@@ -377,6 +378,8 @@
         <div class="section-text animate-fadein" style="animation-delay: 0.4s;">
             место проведения торжества<br>ресторан "Версаль", зал "Царский"
         </div>
+        <!-- Фото зала -->
+        <img src="https://ilya777641.github.io/ilya-diana-wedding/zal.jpg" alt="Зал Версаль" class="hall-photo animate-fadein" style="animation-delay: 0.6s;">
     </div>
 
     <!-- Программа дня -->
@@ -427,13 +430,9 @@
         <div class="section-text animate-fadein" style="animation-delay: 0.2s;">
             Для нас самое главное - Ваше присутствие! Но мы будем рады, если Вы поддержите цветовую гамму нашей свадьбы.
         </div>
-        <div class="color-circles animate-fadein" style="animation-delay: 0.4s;">
-            <div class="color-circle" style="background-color: #c9b6a0;"></div>
-            <div class="color-circle" style="background-color: #8b5e3c;"></div>
-            <div class="color-circle" style="background-color: #e8ddd2;"></div>
-            <div class="color-circle" style="background-color: #a67c52;"></div>
-            <div class="color-circle" style="background-color: #f0e4d8;"></div>
-            <div class="color-circle" style="background-color: #d4b99c;"></div>
+        <!-- Фото дресс-кода вместо цветных квадратов -->
+        <div style="margin: 30px auto; text-align: center;">
+            <img src="https://ilya777641.github.io/ilya-diana-wedding/dresscode.jpg" alt="Дресс-код" class="dresscode-photo animate-fadein" style="animation-delay: 0.4s;">
         </div>
         <div class="quote" style="font-size: 32px; margin-top: 20px;"><em>Спасибо!</em></div>
     </div>
@@ -452,7 +451,7 @@
 </div>
 
 <!-- Таймер с ВАШИМ фото на фоне -->
-<div class="timer-cover" style="background-image: url('https://ilya777641.github.io/ilya-diana-wedding/vmeste.jpg');">
+<div class="timer-cover" style="background-image: url('https://ilya777641.github.io/ilya-diana-wedding/9fac3704-239c-4f60-8aa2-d89baa589815.jpg');">
     <div class="timer-overlay"></div>
     <div class="timer-content">
         <div class="timer-title animate-fadeinup">До торжества осталось:</div>
