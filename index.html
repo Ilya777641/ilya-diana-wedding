@@ -358,9 +358,9 @@
 
 <!-- Основной контент -->
 <div class="main-content">
-    <!-- Приветственный текст -->
+    <!-- Приветственный текст с ПЕРСОНАЛИЗАЦИЕЙ -->
     <div class="section">
-        <div class="section-title animate-fadein">Дорогие родные и друзья!</div>
+        <div class="section-title animate-fadein" id="guestGreeting">Дорогие друзья!</div>
         <div class="section-text animate-fadein" style="animation-delay: 0.3s;">
             Мы счастливы пригласить вас на наше великое событие - свадьбу!
         </div>
@@ -443,10 +443,7 @@
             
             <!-- ДВЕ КНОПКИ: MAX и TELEGRAM -->
             <div class="buttons-row">
-                <!-- 🔗 СЮДА ВСТАВИТЬ ССЫЛКУ НА ГРУППУ В MAX -->
                 <a href="https://max.ru/join/MleaFiKVgDlmSVq3Aw-aavJiCIyh62ZdqjyyWpfxEv4" target="_blank" class="btn-max">📱 ВСТУПИТЬ В MAX</a>
-                
-                <!-- 🔗 СЮДА ВСТАВИТЬ ССЫЛКУ НА ГРУППУ В TELEGRAM -->
                 <a href="https://t.me/+qm_suAjnZ2RmOWZi" target="_blank" class="btn-telegram">💬 ВСТУПИТЬ В TELEGRAM</a>
             </div>
         </div>
@@ -459,7 +456,6 @@
             Для нас самое главное-ваше присутствие!
 Но мы будем очень признательны, если вы поддержите цветовую гамму спокойных природных оттенков!
         </div>
-        <!-- Фото дресс-кода вместо цветных квадратов -->
         <div style="margin: 30px auto; text-align: center;">
             <img src="https://ilya777641.github.io/ilya-diana-wedding/dresscode.jpg" alt="Дресс-код" class="dresscode-photo animate-fadein" style="animation-delay: 0.4s;">
         </div>
@@ -511,6 +507,52 @@
 </div>
 
 <script>
+    // ========== ПЕРСОНАЛИЗАЦИЯ ГОСТЯ ==========
+    function getGuestNameFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let guest = urlParams.get('guest');
+        if (guest) {
+            guest = decodeURIComponent(guest);
+            return guest;
+        }
+        return null;
+    }
+
+    function getCorrectGreeting(guestName) {
+        if (!guestName) return "Дорогие друзья!";
+        
+        // Если есть "и" или запятая — значит пара
+        if (guestName.includes(' и ') || guestName.includes(',') || guestName.includes('&')) {
+            let names = guestName.replace(/[&,]/g, ' и').split(' и ');
+            if (names.length === 2) {
+                let name1 = names[0].trim();
+                let name2 = names[1].trim();
+                let ending1 = name1.slice(-1);
+                let ending2 = name2.slice(-1);
+                let form1 = (ending1 === 'а' || ending1 === 'я') ? 'ая' : 'ой';
+                let form2 = (ending2 === 'а' || ending2 === 'я') ? 'ая' : 'ой';
+                return `Дорог${form1} ${name1} и дорог${form2} ${name2}!`;
+            }
+            return `Дорогие ${guestName}!`;
+        }
+        
+        // Одиночное имя
+        let lastName = guestName.slice(-1);
+        if (lastName === 'а' || lastName === 'я') {
+            return `Дорогая ${guestName}!`;
+        } else {
+            return `Дорогой ${guestName}!`;
+        }
+    }
+
+    // Применяем персонализацию
+    const guestName = getGuestNameFromURL();
+    const greetingElement = document.getElementById('guestGreeting');
+    if (greetingElement) {
+        greetingElement.textContent = getCorrectGreeting(guestName);
+    }
+    // ==========================================
+
     // Таймер до 31 июля 2026
     function updateTimer() {
         const target = new Date(2026, 6, 31, 0, 0, 0);
