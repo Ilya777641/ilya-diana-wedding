@@ -19,7 +19,7 @@
             line-height: 1.4;
         }
 
-        /* Анимации как в оригинале */
+        /* Анимации */
         @keyframes fadein {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -47,87 +47,11 @@
         .animate-fadeinright { animation: fadeinright 5s ease 0.5s forwards; opacity: 0; }
         .animate-zoomin { animation: zoomin 5s ease 0.5s forwards; opacity: 0; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Шапка (фиксированная) */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #ffffff;
-            z-index: 990;
-            transform: translateY(-100%);
-            transition: transform 0.15s;
-            box-shadow: 0 1px 0 rgba(0,0,0,0.1);
-        }
-        .header.visible {
-            transform: translateY(0);
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-family: 'Cormorant Infant', serif;
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            color: #333;
-            text-decoration: none;
-        }
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            font-family: 'Cormorant Infant', serif;
-            font-size: 18px;
-            font-weight: 500;
-            color: #494949;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: #2e5754;
-        }
-        .consult-btn {
-            padding: 8px 20px;
-            border: 1px solid #757575;
-            border-radius: 30px;
-            background: transparent;
-            font-family: 'Cormorant Infant', serif;
-            font-size: 18px;
-            font-weight: 500;
-            color: #494949;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .consult-btn:hover {
-            background-color: #2e5754;
-            color: #fff;
-            border-color: #2e5754;
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-        }
-
-        /* Hero секция с фото */
+        /* Hero секция */
         .hero {
             position: relative;
             height: 610px;
             overflow: hidden;
-            margin-top: 0;
         }
         .hero-bg {
             position: absolute;
@@ -215,7 +139,7 @@
             margin-top: 30px;
         }
 
-        /* Галерея фото (3 фотографии как на оригинале) */
+        /* Галерея */
         .gallery {
             display: flex;
             justify-content: center;
@@ -254,7 +178,6 @@
         .schedule-time {
             font-size: 50px;
             font-weight: 400;
-            font-family: 'Cormorant Infant', serif;
         }
         .schedule-label {
             font-size: 23px;
@@ -268,7 +191,7 @@
             margin: 20px auto;
         }
 
-        /* Карточки для желаний и деталей */
+        /* Карточки */
         .cards-container {
             display: flex;
             justify-content: center;
@@ -291,6 +214,7 @@
         .card-block p {
             font-size: 20px;
             line-height: 1.4;
+            margin-bottom: 15px;
         }
         .telegram-btn {
             display: inline-block;
@@ -303,7 +227,7 @@
             margin-top: 20px;
         }
 
-        /* Цветовые кружочки дресс-кода */
+        /* Дресс-код */
         .color-circles {
             display: flex;
             justify-content: center;
@@ -318,7 +242,7 @@
             border: 1px solid #000;
         }
 
-        /* Таймер внизу */
+        /* Таймер */
         .timer-cover {
             height: 80vh;
             min-height: 500px;
@@ -355,9 +279,6 @@
             gap: 40px;
             flex-wrap: wrap;
         }
-        .timer-block {
-            text-align: center;
-        }
         .timer-number {
             font-size: 60px;
             font-weight: 400;
@@ -384,16 +305,6 @@
             text-decoration: none;
         }
 
-        /* Футер */
-        .footer {
-            background-color: #2e5754;
-            padding: 15px;
-            text-align: center;
-            color: #f8f7f7;
-            font-size: 18px;
-        }
-
-        /* Адаптив */
         @media (max-width: 768px) {
             .section-title { font-size: 32px; }
             .section-text { font-size: 18px; }
@@ -405,11 +316,9 @@
 </head>
 <body>
 
-
-
-<!-- Hero секция с фото -->
+<!-- Hero секция с ВАШИМ фото -->
 <div class="hero">
-    <img src="https://static.tildacdn.com/tild3235-6134-4533-b135-356264636664/5212975083775791987.jpg" alt="Фото жениха и невесты" class="hero-bg">
+    <img src="https://ilya777641.github.io/ilya-diana-wedding/9fac3704-239c-4f60-8aa2-d89baa589815.jpg" alt="Илья и Диана" class="hero-bg">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div class="hero-names animate-fadeinup">
@@ -431,12 +340,9 @@
         <div class="section-text animate-fadein" style="animation-delay: 0.5s;">
             Этот день будет являться самым значимым и запоминающимся в нашей жизни, и мы хотим разделить его с вами!
         </div>
-        <div class="quote animate-fadein" style="animation-delay: 0.7s;">
-            Счастье - это, когда ты нашёл того, кто искал тебя.
-        </div>
     </div>
 
-    <!-- Галерея фото (как на оригинале - 3 фото) -->
+    <!-- Галерея -->
     <div class="gallery">
         <div class="gallery-item animate-fadeinright">
             <img src="https://static.tildacdn.com/tild3730-3835-4236-a238-336461353361/5246891718954052783.jpg" alt="Фото 1">
@@ -447,12 +353,6 @@
         <div class="gallery-item animate-fadeinleft">
             <img src="https://static.tildacdn.com/tild3732-3863-4463-a538-326634636431/5431433900883832054.jpg" alt="Фото 3">
         </div>
-    </div>
-
-    <!-- Цитата с сердечком -->
-    <div class="section">
-        <img src="https://static.tildacdn.com/tild6330-6339-4030-b236-646537636231/heart_18956525.png" alt="heart" style="width: 57px; margin: 20px auto;">
-        <div class="quote" style="font-size: 32px;"><em>Счастье - это, когда ты нашёл того, кто искал тебя.</em></div>
     </div>
 
     <!-- Место проведения -->
@@ -495,19 +395,19 @@
         <div class="schedule-line"></div>
     </div>
 
-   <!-- Пожелания и Детали -->
-<div class="cards-container">
-    <div class="card-block animate-fadeinleft">
-        <h3>ПОЖЕЛАНИЯ</h3>
-        <p>Мы очень ценим вашу заботу, внимание и будем рады любому подарку! И не важно, в какой конверт вы его упакуете...</p>
-        <p>Очень надеемся, что у вас будет возможность оставить детей дома под присмотром, и полностью погрузиться в атмосферу праздника.</p>
+    <!-- Пожелания и Детали -->
+    <div class="cards-container">
+        <div class="card-block animate-fadeinleft">
+            <h3>ПОЖЕЛАНИЯ</h3>
+            <p>Мы очень ценим вашу заботу, внимание и будем рады любому подарку! И не важно, в какой конверт вы его упакуете...</p>
+            <p>Очень надеемся, что у вас будет возможность оставить детей дома под присмотром, и полностью погрузиться в атмосферу праздника.</p>
+        </div>
+        <div class="card-block animate-fadeinright">
+            <h3>ДЕТАЛИ</h3>
+            <p>Мы создали группу в Max, куда можно будет добавлять фото и видео с нашей свадьбы, чтобы сохранить в памяти лучшие моменты.</p>
+            <a href="#" class="telegram-btn">ВСТУПИТЬ В ЧАТ</a>
+        </div>
     </div>
-    <div class="card-block animate-fadeinright">
-        <h3>ДЕТАЛИ</h3>
-        <p>Мы создали группу в Max, куда можно будет добавлять фото и видео с нашей свадьбы, чтобы сохранить в памяти лучшие моменты.</p>
-        <a href="#" class="telegram-btn">ВСТУПИТЬ В ЧАТ</a>
-    </div>
-</div>
 
     <!-- Дресс-код -->
     <div class="section">
@@ -533,14 +433,14 @@
             <p>По всем вопросам, связанным с торжественным вечером и сюрпризами, обращаться<br>к нашему ведущему:</p>
             <div style="margin-top: 20px;">
                 <strong style="font-size: 32px;">Арсений Вольный</strong><br>
-                <a href="tel:+79173597707" class="phone-number" style="font-size: 28px;">+7 917 359-77-07</a>
+                <a href="tel:+79173597707" class="phone-number">+7 917 359-77-07</a>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Таймер с фоном -->
-<div class="timer-cover" style="background-image: url('https://static.tildacdn.com/tild3730-6434-4563-a130-633533353439/5212975083775791987.jpg');">
+<!-- Таймер с ВАШИМ фото на фоне -->
+<div class="timer-cover" style="background-image: url('https://ilya777641.github.io/ilya-diana-wedding/9fac3704-239c-4f60-8aa2-d89baa589815.jpg');">
     <div class="timer-overlay"></div>
     <div class="timer-content">
         <div class="timer-title animate-fadeinup">До торжества осталось:</div>
@@ -570,22 +470,10 @@
     </div>
 </div>
 
-
-
 <script>
-    // Показать шапку при скролле
-    window.addEventListener('scroll', function() {
-        var header = document.getElementById('header');
-        if (window.scrollY > 100) {
-            header.classList.add('visible');
-        } else {
-            header.classList.remove('visible');
-        }
-    });
-
-    // Таймер до 31 июня 2026
+    // Таймер до 31 июля 2026 (ИСПРАВЛЕНО!)
     function updateTimer() {
-        const target = new Date(2026, 5, 31, 0, 0, 0);
+        const target = new Date(2026, 6, 31, 0, 0, 0);  // 6 = июль
         const now = new Date();
         const diff = target - now;
 
@@ -611,7 +499,7 @@
     setInterval(updateTimer, 1000);
 </script>
 
-<!-- Аудиоплеер как на оригинале -->
+<!-- Музыка -->
 <audio id="bg-music" loop>
     <source src="https://www.dropbox.com/scl/fi/8bl8yd5teyrcwc02h8tvh/Love-Me-Like-You-Do-From-_Fifty-Shades-Of-Grey_.mp3?rlkey=dx2vt43o35c0pjypewqiuyhi0&st=8ufbubk8&raw=1" type="audio/mpeg">
 </audio>
