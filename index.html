@@ -200,19 +200,19 @@
         .card-block {
             background: white;
             border-radius: 10px;
-            padding: 30px;
+            padding: 35px 30px;
             width: 500px;
             border: 1px solid #000;
         }
         .card-block h3 {
             font-size: 30px;
             font-weight: 400;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .card-block p {
             font-size: 20px;
-            line-height: 1.4;
-            margin-bottom: 15px;
+            line-height: 1.45;
+            margin-bottom: 18px;
         }
 
         .buttons-row {
@@ -327,6 +327,7 @@
             .timer-title { font-size: 32px; }
             .timer-number { font-size: 40px; }
             .btn-max, .btn-telegram { padding: 10px 20px; font-size: 16px; }
+            .card-block p { font-size: 18px; }
         }
     </style>
 </head>
@@ -396,8 +397,15 @@
         <div class="schedule-line"></div>
     </div>
 
+    <!-- Блоки ПОЖЕЛАНИЯ и ДЕТАЛИ -->
     <div class="cards-container">
+        <!-- Блок ПОЖЕЛАНИЯ (ВОЗВРАЩЁН) -->
+        <div class="card-block animate-fadeinleft">
+            <h3>ПОЖЕЛАНИЯ</h3>
+            <p>Ждём от вас море позитива, улыбок, тёплых слов и отличного настроения! Нам очень хочется, чтобы этот вечер прошёл легко, душевно и по-настоящему празднично.</p>
+        </div>
         
+        <!-- Блок ДЕТАЛИ -->
         <div class="card-block animate-fadeinright">
             <h3>ДЕТАЛИ</h3>
             <p>Мы создали группы, куда можно будет добавлять фото и видео с нашей свадьбы, чтобы сохранить в памяти лучшие моменты.</p>
@@ -474,20 +482,20 @@
         }
         
         // Список женских имён, оканчивающихся не на а/я
-const femaleExceptions = ['Любовь', 'Николь', 'Жаклин', 'Ассоль', 'Жизель', 'Габриэль', 'Мишель'];
-    
-// Проверяем, есть ли имя в списке исключений
-if (femaleExceptions.includes(guestName)) {
-    return `Дорогая ${guestName}!`;
-}
-    
-// Если имя одно — определяем род по окончанию
-let lastName = guestName.slice(-1);
-if (lastName === 'а' || lastName === 'я') {
-    return `Дорогая ${guestName}!`;
-} else {
-    return `Дорогой ${guestName}!`;
-}
+        const femaleExceptions = ['Любовь', 'Николь', 'Жаклин', 'Ассоль', 'Жизель', 'Габриэль', 'Мишель'];
+        
+        // Проверяем, есть ли имя в списке исключений
+        if (femaleExceptions.includes(guestName)) {
+            return `Дорогая ${guestName}!`;
+        }
+        
+        // Если имя одно — определяем род по окончанию
+        let lastName = guestName.slice(-1);
+        if (lastName === 'а' || lastName === 'я') {
+            return `Дорогая ${guestName}!`;
+        } else {
+            return `Дорогой ${guestName}!`;
+        }
     }
 
     const guestName = getGuestNameFromURL();
